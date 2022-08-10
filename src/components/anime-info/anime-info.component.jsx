@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import "./anime-info.styles.css";
 import { ReactComponent as ArrowButton } from "../../assets/down-arrow.svg";
 import Button from "../buttons/button.component";
@@ -30,11 +30,11 @@ const AnimeInfo = ({ anime_info }) => {
     <Fragment>
       <div className="card-info-container">
         <div className="banner-container">
-          <img className="anime-banner" src={image_url} />
+          <img className="anime-banner" src={image_url} alt="banner" />
         </div>
         <div className="info-title-container">
           <div className="anime-info-container">
-            <img className="info-image" src={image_url} />
+            <img className="info-image" src={image_url} alt="poster" />
             <span className="info-title-1">{title}</span>
             <span className="info-title-2">{title_english}</span>
             <span className="info-title-2">{title_japanese}</span>

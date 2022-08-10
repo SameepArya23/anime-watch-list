@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect } from "react";
+import { Fragment, useContext } from "react";
 import AnimeInfo from "../../components/anime-info/anime-info.component";
 import { AnimeIdContext } from "../../contexts/anime-info.context";
 import Loader from "../../components/loader/loader.component";

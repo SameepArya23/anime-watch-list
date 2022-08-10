@@ -24,7 +24,11 @@ const AddedList = () => {
         return (
           <div key={mal_id} className="watch-list-container">
             <div className="list-info-container">
-              <img className="watch-list-image" src={image_url} />
+              <img
+                className="watch-list-image"
+                src={image_url}
+                alt="anime poster"
+              />
               <div className="watch-list-info-container">
                 <span className="main-title">{title}</span>
                 <span className="secondary-title">{title_english}</span>

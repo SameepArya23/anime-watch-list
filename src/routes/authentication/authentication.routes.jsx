@@ -2,10 +2,7 @@ import { Fragment, useContext } from "react";
 import Button from "../../components/buttons/button.component";
 import UserProfile from "../../components/user-profile/user-profile.components";
 import { UserContext } from "../../contexts/user.context";
-import {
-  createUserDocumentFromAuth,
-  signInWithGooglePopup,
-} from "../../utils/firebase/firebase.utils";
+import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
 import "./auth.styles.css";
 
 const Authentication = () => {
