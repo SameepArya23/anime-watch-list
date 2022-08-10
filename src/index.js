@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { AnimeListProvider } from "./contexts/anime-list.context";
 import { NewAnimeListProvider } from "./contexts/new-anime-list.context";
+import { AnimeIdProvider } from "./contexts/anime-info.context";
 import { AddAnimeProvider } from "./contexts/add-anime-list.context";
 import { UserProvider } from "./contexts/user.context";
 
