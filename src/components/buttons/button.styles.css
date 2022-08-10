@@ -1,0 +1,53 @@
+.button-container{
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.add-to-list-btn{
+    background-color: rgb(41, 41, 41);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    height: fit-content;
+    margin-left: 25px;
+}
+
+.add-to-list-btn:hover{
+    background-color: #ff3434;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.delete-btn{
+    background-color: rgb(41, 41, 41);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    height: fit-content;
+    margin-right: 18px;
+    padding: 9px 12px;
+}
+
+.delete-btn:hover{
+    background-color: #ff3434;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.google{
+    background-color: #ff3434;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 5px;
+}

@@ -1,0 +1,32 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+    width: 250px;
+    height: fit-content;
+    align-items: center;
+    padding: 0px 0px 5px 0px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.card-container:hover{
+    transform: scale(1.04);
+    transition: all 0.3s ease;
+}
+
+.img{
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+}
+
+.title{
+    color: #090909;
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
+    margin: 15px 6px 5px 6px;
+}

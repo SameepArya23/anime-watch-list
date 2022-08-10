@@ -1,0 +1,19 @@
+.pagination-container{
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    background-color: rgba(37, 36, 36, 0.991);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.arrow{
+    color: white;
+    cursor: pointer;
+}
+
+.page-no{
+    margin-top: 5px;
+    color: white;
+}

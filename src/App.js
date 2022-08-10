@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Navigation from "./routes/navigation/navigation.routes";
+import { Route, Routes } from "react-router-dom";
+import Authentication from "./routes/authentication/authentication.routes";
+import Explore from "./routes/explore/Explore.routes";
+import Home from "./routes/home/home.routes";
+import MyAnimeList from "./routes/my-anime-list/anime-watch-list.routes";
+import CardInfo from "./routes/card-info/card-info.routes";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="explore" element={<Explore />} />
+        <Route path="my-anime-list" element={<MyAnimeList />} />
+        <Route path="auth" element={<Authentication />} />
+        <Route path="anime-info" element={<CardInfo />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

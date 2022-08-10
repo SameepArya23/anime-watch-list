@@ -1,0 +1,15 @@
+.info-card-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 10px;
+}
+
+.info{
+    margin: 5px 0px;
+}

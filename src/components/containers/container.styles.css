@@ -1,0 +1,27 @@
+.ex-card-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 45px;
+    row-gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    row-gap: 40px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+
+.alternate-message{
+    color: #464646;
+    font-size: xx-large;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
