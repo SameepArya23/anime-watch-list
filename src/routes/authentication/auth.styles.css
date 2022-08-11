@@ -4,3 +4,14 @@
     left: 50%;
     transform: translate(-50%, 50%);
 }
+
+.alternate-text-message{
+    width: 300px;
+    margin-bottom: 50px;
+    color: #464646;
+    font-size: xx-large;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}

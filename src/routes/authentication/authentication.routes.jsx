@@ -17,7 +17,9 @@ const Authentication = () => {
         <UserProfile />
       ) : (
         <Fragment>
-          <span className="alternate-message">Sign In to your account</span>
+          <span className="alternate-text-message">
+            Sign In to your account
+          </span>
           <Button buttonType={"google"} onClick={logGoogleUser}>
             Sign In With Google
           </Button>
