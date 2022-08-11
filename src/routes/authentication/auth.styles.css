@@ -1,17 +1,18 @@
 .auth-container{
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .alternate-text-message{
-    width: 300px;
+    width: 350px;
     margin-bottom: 50px;
     color: #464646;
     font-size: xx-large;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    text-align: center;
 }
