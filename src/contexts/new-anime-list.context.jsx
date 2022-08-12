@@ -18,14 +18,14 @@ export const NewAnimeListProvider = ({ children }) => {
 
   const searchHandler = (event) => {
     event.preventDefault();
-    setInterval(() => {
+    setTimeout(() => {
       setSearchString(event.target.value);
-    }, 1000);
+    }, 2000);
+    clearTimeout();
   };
 
   useEffect(() => {
-    if (searchString === "") return;
-    fetchSearchedAnime();
+    if (searchString) fetchSearchedAnime();
   }, [searchString]);
 
   const value = {

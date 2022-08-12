@@ -3,6 +3,7 @@ import { AnimeListContext } from "../../contexts/anime-list.context";
 import "./container.styles.css";
 import Card from "../card/card.component";
 import { NewAnimeListContext } from "../../contexts/new-anime-list.context";
+import Loader from "../loader/loader.component";
 
 const ExploreCardsContainer = () => {
   const { newAnimeList, searchString } = useContext(NewAnimeListContext);
@@ -10,7 +11,7 @@ const ExploreCardsContainer = () => {
   return (
     <Fragment>
       <div className="ex-card-container">
-        {(!newAnimeList ? animeList : newAnimeList).map((anime) => {
+        {(!searchString ? animeList : newAnimeList).map((anime) => {
           const { title, image_url, mal_id } = anime;
           return (
             <Card
@@ -22,11 +23,6 @@ const ExploreCardsContainer = () => {
           );
         })}
       </div>
-      {searchString ? (
-        ""
-      ) : (
-        <span className="alternate-message">Search Anime</span>
-      )}
     </Fragment>
   );
 };

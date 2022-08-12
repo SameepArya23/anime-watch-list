@@ -9,16 +9,13 @@ const Explore = () => {
   return (
     <Fragment>
       <div className="explore-page-container">
-        <div className="heading-container">
-          <h3 className="heading">POPULAR ANIME</h3>
-          <form action="submit" onSubmit={searchHandler}>
-            <input
-              type="search"
-              placeholder="search your favorite anime"
-              className="search-bar"
-              onChange={searchHandler}
-            />
-          </form>
+        <div className="explore-heading-container">
+          <input
+            type="search"
+            placeholder="search your favorite anime"
+            className="search-bar"
+            onChange={searchHandler}
+          />
         </div>
         <ExploreCardsContainer />
       </div>

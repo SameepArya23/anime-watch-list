@@ -6,12 +6,24 @@
 
 .search-bar{
     margin: 10px 50px 20px 0%;
-    width: 340px;
+    width: 460px;
     height: 35px;
     border-radius: 5px;
     background-color: #090909;
-    border: 2px solid #313131;
+    border: none;
+    border-bottom: 2px solid #313131;
     outline: none;
     padding: 5px 10px;
     color: rgb(166, 166, 166);
+    font-size: large;
+    /* text-align: center; */
+}
+
+.explore-heading-container{
+    width: 96%;
+    padding: 0px 15px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }

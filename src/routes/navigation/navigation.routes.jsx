@@ -16,7 +16,10 @@ const Navigation = () => {
 
   const { addList } = useContext(AddAnimeContext);
 
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser, isSignOutOpen, setIsSignOutOpen } =
+    useContext(UserContext);
+
+  const toggleSignOut = () => setIsSignOutOpen(!isSignOutOpen);
 
   const signOutHandler = async () => {
     await signOutUser();
@@ -48,11 +51,16 @@ const Navigation = () => {
             <span className="profile-img-container">
               <span
                 className={`link ${authMatch ? "active" : ""}`}
-                onClick={signOutHandler}
+                onClick={toggleSignOut}
               >
                 {currentUser.displayName.split(" ")[0].toUpperCase()} JI
               </span>
               <img className="profile-photo" src={currentUser.photoURL} />
+              {isSignOutOpen && (
+                <span className="sign-out-dropdown" onClick={signOutHandler}>
+                  Sign-out
+                </span>
+              )}
             </span>
           ) : (
             <Link className={`link ${authMatch ? "active" : ""}`} to="auth">

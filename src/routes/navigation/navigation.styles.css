@@ -69,11 +69,36 @@
 
 .profile-img-container{
     display: flex;
+    position: relative;
 }
 
 .profile-photo{
     width: 30px;
     height: 30px;
     border-radius: 50px;
-    margin-left: 15px;
+    margin-left: 10px;
+}
+
+.sign-out-dropdown{
+    position: absolute;
+    top: 125%;
+    right: 0%;
+    padding: 8px 8px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    cursor: pointer;
+    animation: dropdown 0.5s ease;
+}
+
+.sign-out-dropdown:hover{
+    background-color: #FF3434;
+    transition: all 0.5s ease;
+}
+
+@keyframes drpdown {
+    0%{top: 0; opacity: 0;}
+    100%{top: 125%; opacity: 1;}
 }
