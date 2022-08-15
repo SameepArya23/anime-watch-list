@@ -1,13 +1,17 @@
 import "./navigation.styles.css";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { Link, Outlet, useMatch } from "react-router-dom";
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useState } from "react";
 import Loader from "../../components/loader/loader.component";
 import { AnimeListContext } from "../../contexts/anime-list.context";
 import { AddAnimeContext } from "../../contexts/add-anime-list.context";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 const Navigation = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const navOpenHandler = () => setIsNavOpen(!isNavOpen);
+
   let exploreMatch = useMatch({ path: "explore", end: true });
   let listMatch = useMatch({ path: "my-anime-list", end: true });
   let authMatch = useMatch({ path: "auth", end: true });
@@ -26,13 +30,20 @@ const Navigation = () => {
     setCurrentUser(null);
   };
 
+  console.log(currentUser);
+
   return (
     <Fragment>
       <div className="nav-container">
         <Link className="logo-container" to="/">
           <Logo className="logo" />
         </Link>
-        <div className="nav-links">
+        <span className="nav-links-btn" onClick={navOpenHandler}>
+          <span className="dot" />
+          <span className="dot" />
+          <span className="dot" />
+        </span>
+        <div className={`nav-links ${isNavOpen ? "open-nav" : ""}`}>
           <Link className={`link ${exploreMatch ? "active" : ""}`} to="explore">
             Explore
           </Link>
