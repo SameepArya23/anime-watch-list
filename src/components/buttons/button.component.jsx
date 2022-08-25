@@ -5,6 +5,7 @@ const Button = ({ children, buttonType, ...otherProps }) => {
     google: "google",
     addToList: "add-to-list-btn",
     deleteBtn: "delete-btn",
+    searchBtn: "search-btn",
   };
 
   return (

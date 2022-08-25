@@ -37,9 +37,7 @@
         width: 100%;
         column-gap: 10px;
         row-gap: 30px;
-        margin-top: 10px;
-        margin-left: 35px;
-        margin-bottom: 50px;
+        margin: 2px 12px;
     }
 
     .ex-card-container{

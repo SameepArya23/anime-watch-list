@@ -18,10 +18,7 @@ export const NewAnimeListProvider = ({ children }) => {
 
   const searchHandler = (event) => {
     event.preventDefault();
-    setTimeout(() => {
-      setSearchString(event.target.value);
-    }, 2000);
-    clearTimeout();
+    setSearchString(event.target[0].value);
   };
 
   useEffect(() => {
