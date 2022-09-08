@@ -31,7 +31,6 @@ export const AnimeListProvider = ({ children }) => {
   const topAnimeList = async () => {
     const topAnime = await fetch(api).then((response) => response.json());
     setAnimeList(topAnime.top);
-    console.log("fetching anime on load");
   };
 
   useEffect(() => {
