@@ -19,9 +19,11 @@ export const AddAnimeProvider = ({ children }) => {
   const get_storage_data = JSON.parse(localStorage.getItem("watch-list"));
 
   const onAddList = () => {
-    const sameId = get_storage_data.find((list) => {
-      return list.mal_id === animeInfo.mal_id;
-    });
+    const sameId = (get_storage_data ? get_storage_data : addList).find(
+      (list) => {
+        return list.mal_id === animeInfo.mal_id;
+      }
+    );
     if (!sameId) {
       setAddList([...addList, animeInfo]);
       localStorage.setItem(
