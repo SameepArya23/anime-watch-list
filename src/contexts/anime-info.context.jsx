@@ -10,16 +10,23 @@ export const AnimeIdProvider = ({ children }) => {
   const [animeInfo, setAnimeInfo] = useState([]);
   const [animeId, setAnimeId] = useState(null);
 
-  const more_info_api = `https://api.jikan.moe/v3/anime/${animeId}`;
+  if (animeId !== null) {
+    localStorage.setItem("mal_id", JSON.stringify(animeId));
+  }
+
+  const get_mal_id = JSON.parse(localStorage.getItem("mal_id"));
+  console.log(get_mal_id);
   const anime_info = async () => {
+    const more_info_api = `https://api.jikan.moe/v3/anime/${get_mal_id}`;
     const info = await fetch(more_info_api).then((response) => response.json());
     setAnimeInfo(info);
+    console.log("fetching on load");
   };
 
   useEffect(() => {
-    if (animeId === null || undefined) return;
+    if (get_mal_id === null || undefined) return;
     anime_info();
-  }, [animeId]);
+  }, [get_mal_id]);
 
   const value = {
     animeInfo,

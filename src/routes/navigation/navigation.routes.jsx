@@ -18,7 +18,7 @@ const Navigation = () => {
 
   const { isLoading } = useContext(AnimeListContext);
 
-  const { addList } = useContext(AddAnimeContext);
+  const { get_storage_data } = useContext(AddAnimeContext);
 
   const { currentUser, setCurrentUser, isSignOutOpen, setIsSignOutOpen } =
     useContext(UserContext);
@@ -50,10 +50,10 @@ const Navigation = () => {
             to="my-anime-list"
           >
             My Anime List
-            {addList.length < 1 ? (
+            {get_storage_data.length < 1 ? (
               ""
             ) : (
-              <span className="badge">{addList.length}</span>
+              <span className="badge">{get_storage_data.length}</span>
             )}
           </Link>
           {currentUser ? (

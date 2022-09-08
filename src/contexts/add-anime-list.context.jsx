@@ -7,11 +7,14 @@ export const AddAnimeContext = createContext({
   setAddList: () => {},
   onAddList: () => {},
   onDeleteHandler: () => {},
+  get_storage_data: [],
 });
 
 export const AddAnimeProvider = ({ children }) => {
   const { animeInfo } = useContext(AnimeIdContext);
   const [addList, setAddList] = useState([]);
+
+  const get_storage_data = JSON.parse(localStorage.getItem("watch-list"));
 
   const onAddList = () => {
     const sameId = addList.find((list) => {
@@ -19,8 +22,11 @@ export const AddAnimeProvider = ({ children }) => {
     });
     if (!sameId) {
       setAddList([...addList, animeInfo]);
+      localStorage.setItem(
+        "watch-list",
+        JSON.stringify([...get_storage_data, animeInfo])
+      );
     } else return alert("This anime already exists in your list!");
-    // console.log(addList);
   };
 
   const onDeleteHandler = (index) => {
@@ -35,6 +41,7 @@ export const AddAnimeProvider = ({ children }) => {
     setAddList,
     onAddList,
     onDeleteHandler,
+    get_storage_data,
   };
   return (
     <AddAnimeContext.Provider value={value}>

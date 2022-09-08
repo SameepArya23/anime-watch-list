@@ -4,15 +4,15 @@ import { useContext } from "react";
 import { AddAnimeContext } from "../../contexts/add-anime-list.context";
 
 const AddedList = () => {
-  const { addList, onDeleteHandler } = useContext(AddAnimeContext);
+  const { onDeleteHandler, get_storage_data } = useContext(AddAnimeContext);
   return (
     <div className="watch-lists-container">
-      {addList.length < 1 ? (
+      {get_storage_data.length < 1 ? (
         <span className="empty-message">Your list is empty!</span>
       ) : (
         ""
       )}
-      {addList.map((list, index) => {
+      {get_storage_data.map((list, index) => {
         const {
           title,
           title_english,

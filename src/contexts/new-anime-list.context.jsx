@@ -14,6 +14,7 @@ export const NewAnimeListProvider = ({ children }) => {
     const search_api = `https://api.jikan.moe/v3/search/anime?q=${searchString}&page=1`;
     const fetchedData = await fetch(search_api).then((res) => res.json());
     setNewAnimeList(fetchedData.results);
+    console.log("fetching new anime on load");
   };
 
   const searchHandler = (event) => {
