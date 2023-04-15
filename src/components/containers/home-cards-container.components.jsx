@@ -8,11 +8,11 @@ const HomeCardsContainer = () => {
   return (
     <div className="cards-container">
       {animeList.map((anime) => {
-        const { title, image_url, mal_id } = anime;
+        const { title, images, mal_id } = anime;
         return (
           <Card
             title={title}
-            imageUrl={image_url}
+            imageUrl={images.jpg.image_url}
             key={mal_id}
             mal_id={mal_id}
           />

@@ -16,9 +16,9 @@ export const AnimeIdProvider = ({ children }) => {
 
   const get_mal_id = JSON.parse(localStorage.getItem("mal_id"));
   const anime_info = async () => {
-    const more_info_api = `https://api.jikan.moe/v3/anime/${get_mal_id}`;
+    const more_info_api = `https://api.jikan.moe/v4/anime/${get_mal_id}`;
     const info = await fetch(more_info_api).then((response) => response.json());
-    setAnimeInfo(info);
+    setAnimeInfo(info.data);
   };
 
   useEffect(() => {

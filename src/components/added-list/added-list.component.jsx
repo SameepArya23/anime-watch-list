@@ -14,20 +14,14 @@ const AddedList = () => {
         ""
       )}
       {(get_storage_data ? get_storage_data : addList).map((list, index) => {
-        const {
-          title,
-          title_english,
-          title_japanese,
-          mal_id,
-          image_url,
-          score,
-        } = list;
+        const { title, title_english, title_japanese, mal_id, images, score } =
+          list;
         return (
           <div key={mal_id} className="watch-list-container">
             <div className="list-info-container">
               <img
                 className="watch-list-image"
-                src={image_url}
+                src={images.jpg.image_url}
                 alt="anime poster"
               />
               <div className="watch-list-info-container">

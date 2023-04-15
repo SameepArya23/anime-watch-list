@@ -27,10 +27,10 @@ export const AnimeListProvider = ({ children }) => {
     if (pageForward > 1) setPageForward(pageForward - 1);
   };
 
-  const api = `https://api.jikan.moe/v3/top/anime/${pageForward}`;
+  const api = `https://api.jikan.moe/v4/top/anime?page=${pageForward}`;
   const topAnimeList = async () => {
     const topAnime = await fetch(api).then((response) => response.json());
-    setAnimeList(topAnime.top);
+    setAnimeList(topAnime.data);
   };
 
   useEffect(() => {

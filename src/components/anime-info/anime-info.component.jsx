@@ -10,7 +10,7 @@ const AnimeInfo = ({ anime_info }) => {
 
   const openInfoHandler = () => setIsOpen(!isOpen);
   const {
-    image_url,
+    images,
     title,
     title_english,
     title_japanese,
@@ -30,11 +30,19 @@ const AnimeInfo = ({ anime_info }) => {
     <Fragment>
       <div className="card-info-container">
         <div className="banner-container">
-          <img className="anime-banner" src={image_url} alt="banner" />
+          <img
+            className="anime-banner"
+            src={images.jpg.image_url}
+            alt="banner"
+          />
         </div>
         <div className="info-title-container">
           <div className="anime-info-container">
-            <img className="info-image" src={image_url} alt="poster" />
+            <img
+              className="info-image"
+              src={images.jpg.image_url}
+              alt="poster"
+            />
             <span className="info-title-1">{title}</span>
             <span className="info-title-2">{title_english}</span>
             <span className="info-title-2">{title_japanese}</span>
